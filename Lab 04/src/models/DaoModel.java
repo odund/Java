@@ -50,9 +50,9 @@ public class DaoModel {
 			
 			// Clear TABLE in database so the records don't accumulate with each application run
 			sql = "DELETE FROM O_GRIG_tab where pid > 0";
-            stmt.executeUpdate(sql);
+            		stmt.executeUpdate(sql);
 			sql = "ALTER TABLE O_GRIG_tab AUTO_INCREMENT = 1";
-            stmt.executeUpdate(sql);
+            		stmt.executeUpdate(sql);
 						
 			sql = "CREATE TABLE IF NOT EXISTS O_GRIG_tab " + 
 					"(pid INTEGER NOT NULL AUTO_INCREMENT, " + 
