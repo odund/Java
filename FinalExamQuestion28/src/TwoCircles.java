@@ -1,4 +1,4 @@
-/**
+/*
  * This program determines whether the second circle inside first one, or overlapping
  * 
  * Final Exam Question 28
