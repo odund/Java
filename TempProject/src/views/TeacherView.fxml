@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+
+<!-- This is how to comment -->
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: b0c4de;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TeacherController">
+	<children>
+	<!--
+      <Button contentDisplay="CENTER" layoutX="263.0" layoutY="437.0" mnemonicParsing="false" onAction="#login" text="Submit" /> 
+      <Label fx:id="lblError" layoutX="60.0" layoutY="315.0" text="" />
+    -->
+      <Button layoutX="16.0" layoutY="135.0" mnemonicParsing="false" onAction="#markStudentAttendance" prefHeight="25.0" prefWidth="162.0" text="Mark Student Attendance" textFill="BROWN" />
+      <Button layoutX="16.0" layoutY="192.0" mnemonicParsing="false" onAction="#gradeStudent" prefHeight="25.0" prefWidth="112.0" text="Grade Student" textFill="BROWN" />
+      <Button layoutX="16.0" layoutY="248.0" mnemonicParsing="false" onAction="#viewStudentProfile" prefHeight="25.0" prefWidth="132.0" text="View Student Profile" textFill="BROWN" />
+      <Button layoutX="16.0" layoutY="307.0" mnemonicParsing="false" onAction="#viewStudentGrades" prefHeight="25.0" prefWidth="162.0" text="View Student Grades" textFill="BROWN" />
+      <Label alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="55.0" prefWidth="127.0" text="Teacher Panel" textFill="MAROON">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      
+      <Pane fx:id="pane1" layoutX="232.0" layoutY="29.0" prefHeight="443.0" prefWidth="354.0" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="11.0" prefHeight="20.0" prefWidth="162.0" text="Mark Student Attendance">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="148.0" layoutY="406.0" mnemonicParsing="false" onAction="#submitAttendance" text="Submit" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="55.0" text="Full Name" />
+            <TextField fx:id="txtAttFullName" alignment="CENTER" layoutX="125.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="105.0" text="Week 1" />
+            <TextField fx:id="txtWeek1" alignment="CENTER" layoutX="125.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="155.0" text="Week 2" />
+            <TextField fx:id="txtWeek2" alignment="CENTER" layoutX="125.0" layoutY="150.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="205.0" text="Week 3" />
+            <TextField fx:id="txtWeek3" alignment="CENTER" layoutX="125.0" layoutY="200.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="255.0" text="Week 4" />
+            <TextField fx:id="txtWeek4" alignment="CENTER" layoutX="125.0" layoutY="250.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="305.0" text="Week 5" />
+            <TextField fx:id="txtWeek5" alignment="CENTER" layoutX="125.0" layoutY="300.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="355.0" text="Week 6" />
+            <TextField fx:id="txtWeek6" alignment="CENTER" layoutX="125.0" layoutY="350.0" prefHeight="25.0" prefWidth="100.0" />
+            <!-- <TextField layoutX="125.0" layoutY="350.0" /> -->
+            <Label fx:id="lblStuAttError" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="380.0" prefHeight="17.0" prefWidth="350.0" text="" textFill="RED" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Pane>
+      
+      <Pane fx:id="pane2" layoutX="232.0" layoutY="29.0" prefHeight="443.0" prefWidth="354.0" visible="false">
+      <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="11.0" prefHeight="20.0" prefWidth="139.0" text="Grade Student">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="148.0" layoutY="406.0" mnemonicParsing="false" onAction="#submitGrades" text="Submit" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="55.0" text="Full Name" />
+            <TextField fx:id="txtFullName" alignment="CENTER" layoutX="125.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="105.0" text="Lab1" />
+            <TextField fx:id="txtLab1" alignment="CENTER" layoutX="125.0" layoutY="100.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="105.0" text="\%" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="155.0" text="Lab2" />
+            <TextField fx:id="txtLab2" alignment="CENTER" layoutX="125.0" layoutY="150.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="155.0" text="\%" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="205.0" text="Midterm Exam" />
+            <TextField fx:id="txtMidtermExam" alignment="CENTER" layoutX="125.0" layoutY="200.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="205.0" text="\%" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="255.0" text="Lab3" />
+            <TextField fx:id="txtLab3" alignment="CENTER" layoutX="125.0" layoutY="250.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="255.0" text="\%" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="305.0" text="Lab4" />
+            <TextField fx:id="txtLab4" alignment="CENTER" layoutX="125.0" layoutY="300.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="305.0" text="\%" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="355.0" text="Final Exam" />
+            <TextField fx:id="txtFinalExam" alignment="CENTER" layoutX="125.0" layoutY="350.0" prefHeight="25.0" prefWidth="100.0" />
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="355.0" text="\%" />
+            
+            <Label fx:id="lblStuGraError" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="380.0" prefHeight="17.0" prefWidth="350.0" text="" textFill="RED" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Pane>
+      
+      <Pane fx:id="pane3" layoutX="232.0" layoutY="29.0" prefHeight="443.0" prefWidth="354.0" visible="false">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="11.0" prefHeight="20.0" prefWidth="166.0" text="View Student Profile">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="148.0" layoutY="406.0" mnemonicParsing="false" onAction="#viewProfile" text="View" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="55.0" text="Full Name:" />
+            <Label fx:id="lblViewProfFullName" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="55.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="105.0" text="Date of Birth:" />
+            <Label fx:id="lblViewDob" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="105.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="155.0" text="Gender:" />
+            <Label fx:id="lblViewGender" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="155.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="205.0" text="Age:" />
+            <Label fx:id="lblViewAge" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="205.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="255.0" text="Home Address:" />
+            <Label fx:id="lblViewHomeAddr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="255.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="305.0" text="Emergency Contact:" />
+            <Label fx:id="lblViewEmerCont" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="305.0" text="" textFill="midnightblue" />
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="355.0" text="Student Unique ID" />
+            <TextField fx:id="txtViewStudentUniqueId" layoutX="125.0" layoutY="350.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label fx:id="lblViewError" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="380.0" prefHeight="17.0" prefWidth="350.0" text="" textFill="RED" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Pane>
+      
+      <Pane fx:id="pane4" layoutX="232.0" layoutY="29.0" prefHeight="443.0" prefWidth="354.0" visible="false">
+       <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="108.0" layoutY="11.0" prefHeight="20.0" prefWidth="189.0" text="View Student Grades">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="190.0" layoutY="400.0" mnemonicParsing="false" onAction="#viewGrades" text="View" />
+            
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="55.0" text="Student Unique ID:" />
+            <TextField fx:id="txtStudentUniqueId" alignment="CENTER" layoutX="125.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+            
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="90.0" text="Full Name:" />
+            <Label fx:id="lblViewFullName" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="90.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="125.0" text="Lab1:" />
+            <Label fx:id="lblViewLab1Gr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="125.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="160.0" text="Lab2:" />
+            <Label fx:id="lblViewLab2Gr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="160.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="195.0" text="Midterm Exam" />
+            <Label fx:id="lblViewMidtermExGr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="195.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="230.0" text="Lab3:" />
+            <Label fx:id="lblViewLab3Gr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="230.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="265.0" text="Lab4:" />
+            <Label fx:id="lblViewLab4Gr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="265.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="300.0" text="Final Exam:" />
+            <Label fx:id="lblViewFinalExGr" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="300.0" text="" textFill="midnightblue" />
+            
+            <Label contentDisplay="CENTER" layoutX="12.0" layoutY="335.0" text="Final Score:" />
+            <Label fx:id="lblViewFinalScore" alignment="CENTER" contentDisplay="CENTER" layoutX="125.0" layoutY="335.0" text="" textFill="midnightblue" />
+            
+            <Label fx:id="lblViewStuGraError" alignment="CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="360.0" prefHeight="17.0" prefWidth="350.0" text="" textFill="RED" />
+            
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Pane>
+   </children>
+</AnchorPane>
